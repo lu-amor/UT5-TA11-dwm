@@ -36,7 +36,7 @@ export default function App() {
             source={{ uri: selectedImage }}
             style={styles.image}
           />
-          <Button title="Choose Another" onPress={() => handleNewPhoto()} />
+          <Button style={styles.chooseAnother} title="Choose Another" onPress={() => handleNewPhoto()} />
         </View>
       )}
       {!selectedImage && (
@@ -64,11 +64,14 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     alignItems: 'center',
-    marginVertical: 0,
   },
   image: {
     width: 300,
     height: 650,
     resizeMode: 'center',
+    marginBottom: 20,
+  },
+  chooseAnother: {
+    marginTop: 40,
   },
 });
